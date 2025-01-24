@@ -1,7 +1,7 @@
 package edu.cmu.cs.cs214.lab02.shapes;
 
 public class Square implements Shape {
-    private double sideLen;
+    private final double sideLen;
 
     public Square(double sideLen) {
         if(sideLen <= 0) throw new IllegalArgumentException("Invalid Sidelen: sidelen must be positive");
@@ -13,12 +13,13 @@ public class Square implements Shape {
         return sideLen;
     }
 
-    public void setSidelen(double sl){
-        this.sideLen = sl;
-    }
-    
     @Override
     public double getArea() {
         return sideLen * sideLen;
+    }
+
+    @Override
+    public String getName() {
+        return "Square";
     }
 }

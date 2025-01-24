@@ -1,8 +1,8 @@
 package edu.cmu.cs.cs214.lab02.shapes;
 
 public class Rectangle implements Shape {
-    private double height;
-    private double width;
+    private final double height;
+    private final double width;
     
     public Rectangle(double height, double width){
         if(height <= 0) throw new IllegalArgumentException("Invalid Height: height must be positive");
@@ -12,25 +12,24 @@ public class Rectangle implements Shape {
     }
 
 
-    //setter and getter
+    //getter
     public double getHeight(){
         return height;
     }
 
-    public void setHeight(double h){
-        this.height = h;
-    }
 
     public double getWidth(){
         return width;
     }
 
-    public void setWidth(double w){
-        this.width = w;
-    }
 
     @Override
     public double getArea() {
         return height * width;
+    }
+
+    @Override
+    public String getName() {
+        return "Rectangle";
     }
 }
