@@ -1,10 +1,10 @@
-function newRenderer(shape:Shape) {
+function newRenderer(shape: Shape) {
     return {
         draw() {
-            const area: number = shape.computeArea()
-            console.log("Shape drawn\n" + "Its area is " + area)
+            const area = shape.computeArea();
+            console.log(`${shape.getName()} drawn\nIts area is ${area.toFixed(2)}`);
         }
-    }
+    };
 }
 
 export { newRenderer }

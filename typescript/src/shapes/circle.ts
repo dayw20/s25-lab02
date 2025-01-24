@@ -1,9 +1,12 @@
-function circle(radius: number): Shape {
-    return {
-        computeArea: function (): number {
-            return Math.PI * radius * radius
-        }
+function newCircle(radius: number): Shape {
+    if (radius <= 0) {
+        throw new Error('Radius must be positive');
     }
+
+    return {
+        computeArea: () => Math.PI * radius * radius,
+        getName: () => 'Circle'
+    };
 }
 
-export { circle }
+export { newCircle }

@@ -1,6 +1,12 @@
-import { newRenderer } from "./renderer.js"
-import { newRectangle } from "./shapes/rectangle.js";
+import { newRenderer } from './renderer.js';
+import { newRectangle } from './shapes/rectangle.js';
+import { newCircle } from './shapes/circle.js';
+import { newsquare } from './shapes/square.js';
 
-const shape: Shape = newRectangle(2, 3)
-const renderer = newRenderer(shape)
-renderer.draw();
+function processShape(shape: Shape) {
+    const renderer = newRenderer(shape);
+    renderer.draw();
+}
+
+processShape(newRectangle(2, 3));
+processShape(newCircle(2));
