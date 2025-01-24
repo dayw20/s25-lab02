@@ -13,7 +13,7 @@ public class Square implements Shape {
         return sideLen;
     }
 
-    public void setSidelen(sl){
+    public void setSidelen(double sl){
         this.sideLen = sl;
     }
     
